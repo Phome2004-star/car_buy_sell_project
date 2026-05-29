@@ -1,0 +1,159 @@
+/* --- Admin & Global Buttons --- */
+.btn-admin-nav {
+    background: #f1c40f !important;
+    color: #000 !important;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 13px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.btn-admin-nav:hover {
+    background: #d4ac0d !important;
+    transform: translateY(-2px);
+}
+
+/* --- Badge System --- */
+.badge {
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.badge-available { background: #2ecc71; color: white; }
+.badge-sold { background: #e74c3c; color: white; }
+
+/* --- Auth/Post Container (Resize Fix) --- */
+.auth-container {
+    background: #ffffff;
+    max-width: 650px; /* Form ကို အချိုးကျအောင် resize လုပ်ထားတယ် */
+    width: 90%;
+    margin: 40px auto;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+.auth-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: -0.5px;
+}
+
+/* --- Smart Grid System (၂ ခုယှဉ်တာကို fix လုပ်ထားတယ်) --- */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* ကွန်ပျူတာမှာ ၂ ခုယှဉ်မယ် */
+    gap: 20px;
+}
+
+/* --- Input Groups --- */
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.input-group input, 
+.styled-select, 
+.styled-textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1.5px solid #eee;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background: #f9f9f9;
+    transition: 0.3s;
+}
+
+.input-group input:focus, 
+.styled-select:focus, 
+.styled-textarea:focus {
+    background: #fff;
+    border-color: #000;
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.05);
+}
+
+.styled-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* --- Buttons --- */
+.auth-btn {
+    width: 100%;
+    padding: 14px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.auth-btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #95a5a6;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.back-link:hover { color: #e74c3c; }
+
+/* --- Animations --- */
+#admin_key_container {
+    border: 1px dashed #e74c3c;
+    padding: 15px;
+    border-radius: 12px;
+    background: #fff5f5;
+    margin-top: 15px;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsive Layout (Mobile Fix) --- */
+@media (max-width: 600px) {
+    .auth-container {
+        padding: 25px;
+        width: 95%;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr; /* ဖုန်းမှာ ၁ ခုစီ ပြန်စီမယ် */
+        gap: 0;
+    }
+
+    .navbar { padding: 15px; }
+}
